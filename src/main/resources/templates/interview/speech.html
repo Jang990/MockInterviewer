@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition Example</title>
+</head>
+<body>
+<h1>Speech Recognition Example</h1>
+<div id="output"></div>
+<button onclick="startRecognition()">Start Recognition</button>
+
+<script th:inline="javascript">
+        var recognition;
+
+        function startRecognition() {
+            recognition = new window.webkitSpeechRecognition();
+            recognition.onresult = function(event) {
+                var transcript = event.results[0][0].transcript;
+                document.getElementById("output").innerHTML += transcript + "<br>";
+            };
+            recognition.start();
+        }
+    </script>
+</body>
+</html>
