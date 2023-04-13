@@ -6,20 +6,29 @@
 </head>
 <body>
 <h1>Speech Recognition Example</h1>
-<div id="output"></div>
+<textarea id="result" rows="10" cols="50" disabled></textarea>
 <button onclick="startRecognition()">Start Recognition</button>
 
 <script th:inline="javascript">
         var recognition;
+        var resultArea = document.getElementById("result").setAttribute("disabled", "");
 
         function startRecognition() {
             recognition = new window.webkitSpeechRecognition();
+
+            recognition.onend = function() {
+                document.getElementById("result").removeAttribute("disabled");
+            };
+
             recognition.onresult = function(event) {
                 var transcript = event.results[0][0].transcript;
-                document.getElementById("output").innerHTML += transcript + "<br>";
+                document.getElementById("result").innerHTML += transcript + "\n";
             };
             recognition.start();
+
         }
+
+
     </script>
 </body>
 </html>
