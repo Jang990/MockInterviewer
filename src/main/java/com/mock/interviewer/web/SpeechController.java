@@ -14,4 +14,9 @@ public class SpeechController {
     public String speechPageV2() {
         return "interview/speechV2";
     }
+
+    @GetMapping("/talk")
+    public String talkPage() {
+        return "interview/talk";
+    }
 }
