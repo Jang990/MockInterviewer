@@ -19,4 +19,9 @@ public class SpeechController {
     public String talkPage() {
         return "interview/talk";
     }
+
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
 }

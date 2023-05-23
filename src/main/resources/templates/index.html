@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link th:href="@{/css/bootstrap.min.css}"
+        href="../css/bootstrap.min.css" rel="stylesheet">
+  <title>Title</title>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header th:replace="fragments/header :: header">헤더 공간</header>
+  <!-- 본문 내용 -->
+  <div class="container">
+    <h1>Welcome to My Website</h1>
+    <p>This is the home page.</p>
+  </div>
+</body>
+</html>
