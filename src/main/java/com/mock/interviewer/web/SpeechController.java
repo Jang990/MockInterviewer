@@ -25,13 +25,13 @@ public class SpeechController {
         return "index";
     }
 
-    @GetMapping("/login")
+    @GetMapping("auth/login")
     public String login() {
-        return "/login";
+        return "/auth/login";
     }
 
-    @GetMapping("/sign-up")
+    @GetMapping("auth/sign-up")
     public String signUp() {
-        return "/sign-up";
+        return "/auth/sign-up";
     }
 }
