@@ -24,4 +24,14 @@ public class SpeechController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/login")
+    public String login() {
+        return "/login";
+    }
+
+    @GetMapping("/sign-up")
+    public String signUp() {
+        return "/sign-up";
+    }
 }
