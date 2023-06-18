@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class SpeechController {
-    @GetMapping("/interview-ready")
+    @GetMapping("/interview/setting")
     public String speechPage() {
-        return "interview/interview-ready";
+        return "interview/interview-setting";
     }
 
     @GetMapping("/speech-V2")
